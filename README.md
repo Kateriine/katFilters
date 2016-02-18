@@ -85,7 +85,7 @@ Brol que je n'ai pas pu résoudre: lors d'un choix de filtres, infinitescroll re
 $type = get_field('activity_type');
 $target = get_field('target');
          
-$icons = '<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>';</pre>
+$icons = '```html<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>```';</pre>
             
 * acf-filter-search.php (210 à 219):
 <pre>
@@ -94,10 +94,11 @@ $icons = '<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-
           $type = get_field('activity_type');
           $target = get_field('target');
         ?>
-</pre>
-<code>
+
+```html
         <ul class="masonry__icons-list">
           <li><span class="masonry-icon masonry-icon--activity_place masonry-icon--<?php echo $place;?>"></span></li>
           <li><span class="masonry-icon masonry-icon--activity_type masonry-icon--<?php echo $type;?>"></span></li>
           <li><span class="masonry-icon masonry-icon--activity_target masonry-icon--<?php echo $target;?>"></span></li>
-        </ul></code>
+        </ul>
+        ```</pre>
