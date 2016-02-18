@@ -84,8 +84,8 @@ Brol que je n'ai pas pu résoudre: lors d'un choix de filtres, infinitescroll re
 <pre>$place = get_field('activity_place');
 $type = get_field('activity_type');
 $target = get_field('target');
-         
-$icons = '```html<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>```';</pre>
+  ```html       
+$icons = '<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>';```</pre>
             
 * acf-filter-search.php (210 à 219):
 <pre>
