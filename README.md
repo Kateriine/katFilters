@@ -1,11 +1,8 @@
 # katFilters
 WP masonry with ACF filters and infinite scroll
-
-h1. Filtres
-
 Difficultés: filtres avec masonry & infinite scroll au clic du bouton "more"
 
-h2. Affichage des filtres
+## Affichage des filtres
 
 Objets de filtres créés via ACF
 
@@ -33,7 +30,7 @@ $filter3 = array(
               'data-hour' =>'false'
             );</pre>
 
-h2. Affichage masonry
+## Affichage masonry
 
 A chaque choix de filtres, la masonry est recréée via une requête ajax. J'ai opté pour des liens plutôt que des formulaires par facilité, excepté le champ de recherche.
 
@@ -48,7 +45,7 @@ Noter que lors d'un range, on exécute deux metaquery sur une seule des valeurs 
 Filtre de recherche: j'ai dû faire un petit hack sur la query et ajouter un filtre de recherche du terme dans le contenu et le titre via add_filter( 'posts_where', 'wp_posts_where', 10, 2 );
 la fonction wp_posts_where est dans acf-filter-search.php. Le champ de recherche basique de WP ne fonctionnait pas.
 
-h2. Pagination avec infinitescroll
+## Pagination avec infinitescroll
 
 Pagination custom pour éviter les bugs (fonction navi_custom dans acf-filter-search.php)
 
@@ -57,7 +54,7 @@ Le conteneur de la pagination est placé en dehors du conteneur de la masonry
 Le contenu de .infinite-pagenavi-container est ajouté dans le conteneur .masonry (.infinite-pagenavi), ce qui permet de l'updater à chaque choix de filtres: il est chargé en ajax avec la masonry.
 => obligation de le faire comme ça pour que l'infinite scroll repère la nouvelle nav.
 
-h2. Réutiliser cette app:
+## Réutiliser cette app:
 
 Fichiers: voir dans le theme urbangaming
 CSS: _isotope.scss
@@ -75,7 +72,7 @@ S'il y a des ranges, appeler le 1er champ [nom]_min, et le deuxième champ [nom]
 
 Brol que je n'ai pas pu résoudre: lors d'un choix de filtres, infinitescroll reprend ses argus par défaut; j'ai donc dû un peu le réécrire.
 
-h2. Attention: en cas d'utilisation avec la carte
+## Attention: en cas d'utilisation avec la carte
 
 - Utiliser pronamic
 - Nommer les champs code postal "cp" et ville "town".
