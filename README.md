@@ -9,7 +9,9 @@ Objets de filtres créés via ACF
 A chaque choix de filtres, la masonry est recréée via une requête ajax. J'ai opté pour des liens plutôt que des formulaires par facilité
 
 Le conteneur des filtres est placé en dehors du conteneur de la masonry
+      ```html
       <div class="filters"></div>
+      ```
 Le contenu de .filters est ajouté dans le conteneur .masonry (.filters-content), ce qui permet de l'updater à chaque choix de filtres: il est chargé en ajax avec la masonry.
 
 Chaque filtre est appelé dans un array, avec divers paramètres:
@@ -85,7 +87,11 @@ Brol que je n'ai pas pu résoudre: lors d'un choix de filtres, infinitescroll re
 $type = get_field('activity_type');
 $target = get_field('target');
          
-$icons = '</pre>```html<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>```<pre>';</pre>
+$icons = '</pre>
+```html
+<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-icon--'. $place . '"></span></li><li><span class="masonry-icon masonry-icon--'. $type . '"></span></li><li><span class="masonry-icon masonry-icon--'. $target . '"></span></li></ul>
+```
+<pre>';</pre>
             
 * acf-filter-search.php (210 à 219):
 <pre>
