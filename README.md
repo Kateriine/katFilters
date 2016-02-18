@@ -94,8 +94,10 @@ $icons = '<ul class="masonry__icons-list"><li><span class="masonry-icon masonry-
           $type = get_field('activity_type');
           $target = get_field('target');
         ?>
+</pre>
+<code>
         <ul class="masonry__icons-list">
           <li><span class="masonry-icon masonry-icon--activity_place masonry-icon--<?php echo $place;?>"></span></li>
           <li><span class="masonry-icon masonry-icon--activity_type masonry-icon--<?php echo $type;?>"></span></li>
           <li><span class="masonry-icon masonry-icon--activity_target masonry-icon--<?php echo $target;?>"></span></li>
-        </ul></pre>
+        </ul></code>
